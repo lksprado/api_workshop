@@ -1,6 +1,10 @@
+import sys 
+import os 
+# Add the project root directory to sys.path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from fastapi import FastAPI
-from .schema import ProdutosSchema
-from .data import Produtos
+from app.schema import ProdutosSchema
+from app.data import Produtos
 
 app = FastAPI()
 lista_de_produtos = Produtos()
