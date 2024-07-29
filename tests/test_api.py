@@ -1,8 +1,16 @@
+
+
+import sys 
+import os 
+# Add the project root directory to sys.path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import pytest 
-
 from fastapi.testclient import TestClient
+from app.main import app 
+from pydantic import BaseModel
 
-from main import app 
+
+
 
 client = TestClient(app)
 
@@ -31,6 +39,6 @@ def test_pega_produto():
         "id": 3,
         "nome": "Mouse Sem Fio",
         "descricao": "Mouse com sensor de alta precisão e conexão sem fio.",
-        "preco": 149.99,
-        "disponivel": False
+        "preco": 149.99
     }
+    
