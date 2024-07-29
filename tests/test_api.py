@@ -1,8 +1,8 @@
 import pytest 
 
 from fastapi.testclient import TestClient
-
-from main import app 
+from app.main import app 
+from pydantic import BaseModel
 
 client = TestClient(app)
 
@@ -34,3 +34,4 @@ def test_pega_produto():
         "preco": 149.99,
         "disponivel": False
     }
+    
