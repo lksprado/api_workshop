@@ -31,7 +31,6 @@ def test_pega_produto():
         "id": 3,
         "nome": "Mouse Sem Fio",
         "descricao": "Mouse com sensor de alta precisão e conexão sem fio.",
-        "preco": 149.99,
-        "disponivel": False
+        "preco": 149.99
     }
     
